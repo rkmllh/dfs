@@ -87,6 +87,11 @@ int main(int argc, char** argv)
 	else
 		printf("\n[+]Your graph is not connected!\n");
 
+	for (x = 0; x < nodes; ++x)
+		free(graph[x]);
+
+	free(graph);
+
 	EXIT_PROCESS(OK);
 }
 
